@@ -1,9 +1,9 @@
 extends layout
 block content
   h1= title
-  - let plane = [{planeType:"Charted Flight", planePrice: 1000000, planeColor:"Red"},{planeType:"Business Plane", planePrice: 500000, planeColor:"Green"},{planeType:"Economy Plane", planePrice: 3000000, planeColor:"Grey"}]
+  - let planes = [{planeType:"Charted Flight", planePrice: 1000000, planeColor:"Red"},{planeType:"Business Plane", planePrice: 500000, planeColor:"Green"},{planeType:"Economy Plane", planePrice: 3000000, planeColor:"Grey"}]
   div(class="container-fluid mt-3")
   div(class="row")
-    each plane,index in plane
+    each plane,index in planes 
         div(class="col-sm-4") #{plane.planeType} - #{plane.planePrice} - #{plane.planeColor}
     
