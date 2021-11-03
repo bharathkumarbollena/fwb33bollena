@@ -5,5 +5,14 @@ block content
   div(class="container-fluid mt-3")
   div(class="row")
     each plane,index in planes 
-        div(class="col-sm-4") #{plane.planeType} - #{plane.planePrice} - #{plane.planeColor}
+        div(class="col-sm-4" onclick=`buy(${index})`) #{plane.planeType} - #{plane.planePrice} - #{plane.planeColor}
+
+
+
+    script.
+
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      } 
     
